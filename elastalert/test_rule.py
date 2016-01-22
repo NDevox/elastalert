@@ -118,7 +118,6 @@ class MockElastAlerter(object):
             num_hits = len(res['hits']['hits'])
             print("Downloaded %s documents to save" % (num_hits))
             return res['hits']['hits']
-
         return None
 
     def mock_count(self, rule, start, end, index):
