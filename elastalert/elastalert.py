@@ -443,7 +443,6 @@ class ElastAlerter():
         except (ElasticsearchException, KeyError) as e:
             self.handle_error('Error querying for last run: %s' % (e), {'rule': rule['name']})
             self.writeback_es = None
-
         return None
 
     def set_starttime(self, rule, endtime):
